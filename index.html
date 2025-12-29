@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nexusaraz</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #6200ea;
+            /*Profil Fotoğraf Uzantısı*/
+            background: url("static/images/profile.png") center center/cover no-repeat;
+            /*Profil Fotoğraf Uzantısı*/
+            margin: 0 auto;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(98, 0, 234, 0.8); 
+            transition: box-shadow 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="start-screen" id="startScreen" onclick="startSite()">
+        Ekrana Tıkla
+    </div>
+
+    <video autoplay loop muted playsinline id="backgroundVideo">
+        <!-- Video Uzantısı (src="Video Uzantısını Yaz") -->
+        <source src="static/backgroundvideo/background-video.mp4" type="video/mp4">
+        <!-- Video Uzantısı (src="Video Uzantısını Yaz") -->
+        Tarayıcın Bu Videoyu Desteklemiyor.
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="audio-control">
+        <img src="static/images/sound-off.png" alt="Audio Control" id="audioToggle" onclick="toggleAudio()">
+    </div>
+
+    <div class="card">
+        <div class="view-counter" id="viewCounter">0</div>
+        <div class="profile-pic"></div>
+        <h1>nexusaraz</h1>
+        <p class="subtitle">
+            <img src="static/images/developed.png" alt="VS Code"> Developer <img src="static/images/vs.png" alt="GitHub"> <img src="static/images/vscode.png" alt="Twitter">
+        </p>
+
+        <div class="icons">
+            <a href="https://discord.gg/VEn8g6NRcr">
+                <img src="static/images/discord-icon.png" alt="Discord">
+            </a>
+            <a href="https://discord.gg/VEn8g6NRcr">
+                <img src="static/images/spotify-icon.png" alt="Spotify">
+            </a>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <img src="static/images/developed.png" alt="LBDev Logo">
+        Developed By nexusaraz
+    </div>
+
+    <script>
+        function startSite() {
+            const startScreen = document.getElementById('startScreen');
+            const video = document.getElementById('backgroundVideo');
+
+            startScreen.classList.add('hidden');
+
+            
+            video.muted = false;
+            video.play();
+        }
+            console.log("Developed nexusaraz");
+            console.log("Developed nexusaraz");
+            console.log("Developed By nexusaraz");
+        const video = document.getElementById('backgroundVideo');
+        const audioToggle = document.getElementById('audioToggle');
+
+        function toggleAudio() {
+            video.muted = !video.muted;
+            audioToggle.src = video.muted ? 'static/images/sound-off.png' : 'static/images/sound-on.png';
+        }
+
+    </script>  
+</body>
+</html>
